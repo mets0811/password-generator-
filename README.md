@@ -2,3 +2,4 @@ This website features a random password generator. It allows users to select a l
 
 ![An app window with the label Password Generator, an input field labeled Your Secure Password, and a Generate Password button.](./Assets/03-javascript-homework-demo.png)
 
+deploy website: https://mets0811.github.io/password-generator-/
