@@ -9,7 +9,6 @@ var upperArray = upperString.split("");
 var totalArray = [];
 function askuser() {
   var passlength = window.prompt("howlong");
-  parseInt(passlength);
   var isNum = confirm("would you like numbers?");
   var isSpecial = confirm("would you like numbers?");
   var isLower = confirm("would you like numbers?");
@@ -26,16 +25,23 @@ function askuser() {
   if (isUpper === true) {
     totalArray = totalArray.concat(upperArray);
   }
-  console.log(totalArray)
+  return parseInt(passlength);
 }
 
 function generatePassword() {
-  askuser();
-  return `hello123`;
+var length= askuser();
+var results=[];
+for(var i=0;i<length;i++){
+  var index=Math.floor(Math.random()*totalArray.length)
+  var digit=totalArray[index]
+  results.push(digit)
+}
+  return results.join("");
 }
 // Write password to the #password input
 function writePassword() {
   var password = generatePassword();
+  console.log(password)
   var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
